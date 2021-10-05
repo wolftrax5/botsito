@@ -1,0 +1,24 @@
+{
+  "name": "discordjsbot-",
+  "version": "1.0.0",
+  "description": "Template to create your owns bots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wolftrax5/discordJsBot-.git"
+  },
+  "keywords": ["Discord", "Bot", "Node"],
+  "author": "Alejandro Medina Robles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wolftrax5/discordJsBot-/issues"
+  },
+  "homepage": "https://github.com/wolftrax5/discordJsBot-#readme",
+  "dependencies": {
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0"
+  }
+}
