@@ -21,8 +21,11 @@ function gotMessage(message) {
     include the messages created by the bot
     be carefull of who & what reply
   */
-  if (message.content === "hola") {
-    message.reply("mundo 🌎");
+  if (
+    message.channel.id === "895763780947034203" &&
+    message.content === "hola"
+  ) {
+    message.channel.send("mundo 🌎");
   }
 }
 client.on("messageCreate", gotMessage);
