@@ -17,7 +17,13 @@ client.once("ready", () => {
 
 //
 function gotMessage(message) {
-  console.log("New Message! ✉", message);
+  /* This function handler all new messages
+    include the messages created by the bot
+    be carefull of who & what reply
+  */
+  if (message.content === "hola") {
+    message.reply("mundo 🌎");
+  }
 }
 client.on("messageCreate", gotMessage);
 // Login to Discord with your client's token
