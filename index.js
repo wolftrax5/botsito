@@ -15,5 +15,10 @@ client.once("ready", () => {
   console.log("Ready! 🤖");
 });
 
+//
+function gotMessage(message) {
+  console.log("New Message! ✉", message);
+}
+client.on("messageCreate", gotMessage);
 // Login to Discord with your client's token
 client.login(TOKEN);
