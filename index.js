@@ -14,7 +14,7 @@ const TOKEN = process.env.TOKEN;
 client.once("ready", () => {
   console.log("Ready! 🤖");
 });
-
+const MESSAGE_RESPONSE = ["Mundo 🌍", "Como estas ?", "Que tal"];
 //
 function gotMessage(message) {
   /* This function handler all new messages
@@ -22,10 +22,12 @@ function gotMessage(message) {
     be carefull of who & what reply
   */
   if (
-    message.channel.id === "895763780947034203" &&
-    message.content === "hola"
+    message.channel.id === "895763806775570463" &&
+    message.content === "hola" &&
+    !message.author.bot
   ) {
-    message.channel.send("mundo 🌎");
+    let randomIndex = Math.floor(Math.random() * MESSAGE_RESPONSE.length);
+    message.channel.send(MESSAGE_RESPONSE[randomIndex]);
   }
 }
 client.on("messageCreate", gotMessage);
