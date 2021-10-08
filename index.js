@@ -14,6 +14,18 @@ const TOKEN = process.env.TOKEN;
 client.once("ready", () => {
   console.log("Ready! 🤖");
 });
-
+const MESSAGE_RESPONSE = ["Mundo 🌍", "Como estas ?", "Que tal"];
+//
+function gotMessage(message) {
+  /* This function handler all new messages
+    include the messages created by the bot
+    be carefull of who & what reply
+  */
+  if (message.content === "hola" && !message.author.bot) {
+    let randomIndex = Math.floor(Math.random() * MESSAGE_RESPONSE.length);
+    message.channel.send(MESSAGE_RESPONSE[randomIndex]);
+  }
+}
+client.on("messageCreate", gotMessage);
 // Login to Discord with your client's token
 client.login(TOKEN);
