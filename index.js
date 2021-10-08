@@ -21,11 +21,7 @@ function gotMessage(message) {
     include the messages created by the bot
     be carefull of who & what reply
   */
-  if (
-    message.channel.id === "895763806775570463" &&
-    message.content === "hola" &&
-    !message.author.bot
-  ) {
+  if (message.content === "hola" && !message.author.bot) {
     let randomIndex = Math.floor(Math.random() * MESSAGE_RESPONSE.length);
     message.channel.send(MESSAGE_RESPONSE[randomIndex]);
   }
